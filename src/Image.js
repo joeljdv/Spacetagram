@@ -1,6 +1,14 @@
 import React, {useState} from 'react'
 
 const Image = ({image}) => {
+
+    const[liked, setLiked] = useState(false)
+
+    const toggleClass = () => {
+        let currentState = liked
+        setLiked(!currentState)
+    }
+
     return (
         <div className="image">
             <p><strong>{image.title}</strong></p>
@@ -8,7 +16,7 @@ const Image = ({image}) => {
             <br/>
             <img src={image.url} />
             <br/>
-            <button><i className="far fa-heart"></i></button>
+            <button className={liked ? 'btn' : null} onClick={toggleClass}><i className="far fa-heart"></i></button>
             <br/>
             <br/>
         </div>

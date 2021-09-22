@@ -7,6 +7,8 @@ function App() {
   const[images, setImages] = useState({})
   const[error, setError] = useState("Wait")
   const [count, setCount] = useState("")
+  const [fact, setFact] = useState("")
+
 
   // fetch images and save the data on state
   useEffect(() => {
@@ -24,15 +26,23 @@ function App() {
     )
   }, [count])
 
-  // create Image component for each image in state
+  useEffect(() => {
+    fetch("https://catfact.ninja/fact")
+    .then(r => r.json())
+    .then(data => {
+      setFact(data)
+    })
+  }, [])
 
-  
+  // check if we got the data from the api, if not render "please wait" and when data is good render images
 
   if(error !== ""){
     return(
       <div>
         <h1>Spacetagram</h1>
         <h2>Please Wait, Loading images</h2>
+        <h3>Here is a quick cat fact:</h3>
+        <p className="fact">{fact.fact}</p>
       </div>
     )
   } else{

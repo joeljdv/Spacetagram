@@ -21,3 +21,11 @@
 .image button :hover{
   font-size: 30px;
 }
+
+.fact {
+  color: green;
+}
+
+.btn{
+  color: red;
+}
