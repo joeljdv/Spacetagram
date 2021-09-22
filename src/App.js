@@ -12,7 +12,7 @@ function App() {
 
   // fetch images and save the data on state
   useEffect(() => {
-    fetch("https://api.nasa.gov/planetary/apod/?start_date=2021-08-16&api_key=tgFeXzfZOcVNfMfgzR5hIIFKVzIZ77bb8GPxgE55")
+    fetch("https://api.nasa.gov/planetary/apod/?start_date=2021-08-20&end_date=2021-09-20&api_key=tgFeXzfZOcVNfMfgzR5hIIFKVzIZ77bb8GPxgE55")
     .then(r => r.json())
     .then(data => {
       setImages(data)
