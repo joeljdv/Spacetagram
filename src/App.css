@@ -2,3 +2,13 @@
   text-align: center;
 }
 
+.image {
+  width: 500px;
+  border: black solid;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.image img {
+    width: 300px;
+}

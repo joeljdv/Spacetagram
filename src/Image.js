@@ -8,7 +8,6 @@ const Image = ({image}) => {
             {image.date}
             <br/>
             <img src={image.url} />
-            <hr/>
         </div>
     )
 }
