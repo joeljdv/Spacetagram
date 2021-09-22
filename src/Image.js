@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Image = ({image}) => {
     return (
         <div className="image">
-            {image.title}
-            <br/>
+            <p><strong>{image.title}</strong></p>
             {image.date}
             <br/>
             <img src={image.url} />
+            <br/>
+            <button>Like</button>
+            <br/>
+            <br/>
         </div>
     )
 }
