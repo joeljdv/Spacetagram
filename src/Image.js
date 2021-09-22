@@ -8,7 +8,7 @@ const Image = ({image}) => {
             <br/>
             <img src={image.url} />
             <br/>
-            <button>Like</button>
+            <button><i className="far fa-heart"></i></button>
             <br/>
             <br/>
         </div>

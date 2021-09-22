@@ -12,3 +12,12 @@
 .image img {
     width: 300px;
 }
+.image button{
+  border: none;
+  background-color: white;
+  font-size: 20px;
+}
+
+.image button :hover{
+  font-size: 30px;
+}
