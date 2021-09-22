@@ -10,7 +10,6 @@ function App() {
     .then(r => r.json())
     .then(data => {
       setImages(data)
-      console.log("HE")
     })
     console.log("OK")
   }, [])
