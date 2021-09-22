@@ -2,7 +2,7 @@ import React from 'react'
 
 const Image = ({image}) => {
     return (
-        <div>
+        <div className="image">
             {image.title}
             <br/>
             {image.date}
