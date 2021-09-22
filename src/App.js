@@ -38,11 +38,12 @@ function App() {
 
   if(error !== ""){
     return(
-      <div>
+      <div className="App">
         <h1>Spacetagram</h1>
+        <p className='copyright'> Brought to you by NASA's Astronomy Photo of the Day (APOD) API</p>
         <h2>Please Wait, Loading images</h2>
         <h3>Here is a quick cat fact:</h3>
-        <p className="fact">{fact.fact}</p>
+        <p className='fact'>{fact.fact}</p>
       </div>
     )
   } else{
@@ -50,6 +51,7 @@ function App() {
     return (
       <div className="App">
         <h1>Spacetagram</h1>
+        <p className="copyright"> Brought to you by NASA's Astronomy Photo of the Day (APOD) API</p>
         {image}
       </div>
     );

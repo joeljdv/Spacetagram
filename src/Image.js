@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Image = ({image}) => {
 
@@ -12,8 +12,7 @@ const Image = ({image}) => {
     return (
         <div className="image">
             <p><strong>{image.title}</strong></p>
-            {image.date}
-            <br/>
+            <p className="date">{image.date}</p>
             <img src={image.url} />
             <br/>
             <button className={liked ? 'btn' : null} onClick={toggleClass}><i className="far fa-heart"></i></button>
